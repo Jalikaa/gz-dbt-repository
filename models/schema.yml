@@ -1,0 +1,49 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Source data for sales"
+    schema: gz_raw_data
+    tables:
+      - name: sales
+        description: "Table containing sales data"
+      - name: raw_gz_sales_copy
+        identifier: raw_gz_sales_copy
+        description: "Table containing sales data"
+        columns:
+          - name: date_date
+            description: "The date of the order"
+          - name: orders_id
+            description: "Identifier for the order made"
+          - name: pdt_id
+            description: "Identifier for the product sold"
+          - name: revenue
+            description: "How much the product was sold for"
+          - name: quantity
+            description: "How many products were sold"
+      - name: ship
+        description: "Table containing shipping data"
+      - name: raw_gz_ship_copy
+        identifier: raw_gz_ship_copy
+        description: "Table containing shipping data"
+        columns:
+          - name: orders_id
+            description: "Unique identifier for each order"
+          - name: shipping_fee
+            description: "How much it cost to ship the products"
+          - name: shipping_fee_1
+            description: "How much it cost to ship the products (copied)"
+          - name: logCost
+            description: "How much the logistics cost"
+          - name: ship_cost
+            description: "Total amount it cost to ship the products"
+      - name: product
+        description: "Table containing product data"
+      - name: raw_product_copy
+        identifier: raw_product_copy
+        description: "Table containing product data"
+        columns:
+          - name: products_id
+            description: "Unique identifier for each product"
+          - name: purchSE_PRICE
+            description: "How much the product was purchased for"
