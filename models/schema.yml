@@ -15,7 +15,7 @@ sources:
             description: "The date of the order"
           - name: orders_id
             description: "Identifier for the order made"
-          - name: pdt_id
+          - name: products_id
             description: "Identifier for the product sold"
           - name: revenue
             description: "How much the product was sold for"
@@ -31,8 +31,6 @@ sources:
             description: "Unique identifier for each order"
           - name: shipping_fee
             description: "How much it cost to ship the products"
-          - name: shipping_fee_1
-            description: "How much it cost to ship the products (copied)"
           - name: logCost
             description: "How much the logistics cost"
           - name: ship_cost
@@ -45,5 +43,5 @@ sources:
         columns:
           - name: products_id
             description: "Unique identifier for each product"
-          - name: purchSE_PRICE
+          - name: purchase_price
             description: "How much the product was purchased for"
